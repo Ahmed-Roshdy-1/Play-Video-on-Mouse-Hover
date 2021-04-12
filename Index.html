@@ -9,18 +9,28 @@
 <body>
     <div class="container">
         <div class="box">
-            <Video src="1.mp4" loop muted></Video>  
+            <Video src="1.mp4" class="vid" loop muted></Video>  
         </div>
         <div class="box">
-            <Video src="2.mp4" loop muted></Video>  
+            <Video src="2.mp4" class="vid" loop muted></Video>  
         </div>
         <div class="box">
-            <Video src="3.mp4" loop muted></Video>  
+            <Video src="3.mp4" class="vid" loop muted></Video>  
         </div>
         <div class="box">
-            <Video src="4.mp4" loop muted></Video>  
+            <Video src="4.mp4" class="vid" loop muted></Video>  
         </div>
-
     </div>
+    <script>
+        const vid = document.querySelectorAll('.vid');
+        for(let i=0;i<vid.length;i++){
+            vid[i].addEventListener('mouseenter',function(e){
+                vid[i].play()
+            })
+            vid[i].addEventListener('mouseout',function(e){
+                vid[i].pause()
+            })
+        }
+    </script>
 </body>
 </html>
