@@ -29,3 +29,7 @@
   height: 100%;
   object-fit: cover;
 }
+
+.container .box:hover {
+  filter: grayscale(0);
+}
